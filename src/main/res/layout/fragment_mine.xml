@@ -1,15 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MineFragment">
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textView"
+
+    <FrameLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/behavior_main_header">
+
+        <chen.module_mine.helper.NestedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp">
+
+                <chen.module_mine.banner.view.BannerBgContainer
+                    android:id="@+id/banner_bg_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp" />
+
+                <chen.module_mine.banner.LoopLayout
+                    android:id="@+id/loop_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="168dp"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+        </chen.module_mine.helper.NestedLinearLayout>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:orientation="vertical"
+        app:layout_behavior="@string/behavior_main_title">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="?attr/colorPrimary"
+            android:gravity="center"
+            android:text="Hello World"
+            android:textColor="?attr/textColor"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:background="#ffffff"
+        app:layout_behavior="@string/behavior_main_tab"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#000000" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:fitsSystemWindows="true"
+        android:background="@color/white"
+        app:layout_behavior="@string/behavior_main_content" />
 
-</FrameLayout>
+</android.support.design.widget.CoordinatorLayout>
