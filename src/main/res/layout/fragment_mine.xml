@@ -1,78 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent">
 
 
-    <FrameLayout
-        android:id="@+id/header"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/minefragment_textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_behavior="@string/behavior_main_header">
-
-        <chen.module_mine.helper.NestedLinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="240dp">
-
-                <chen.module_mine.banner.view.BannerBgContainer
-                    android:id="@+id/banner_bg_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="240dp" />
-
-                <chen.module_mine.banner.LoopLayout
-                    android:id="@+id/loop_layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="168dp"
-                    android:layout_gravity="bottom" />
-            </FrameLayout>
-        </chen.module_mine.helper.NestedLinearLayout>
-    </FrameLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/title_height"
-        android:orientation="vertical"
-        app:layout_behavior="@string/behavior_main_title">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="?attr/colorPrimary" />
-
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="?attr/colorPrimary"
-            android:gravity="center"
-            android:text="Hello World"
-            android:textColor="?attr/textColor"
-            android:textSize="18sp" />
-    </LinearLayout>
-
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tablayout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/tab_height"
-        android:background="#ffffff"
-        app:layout_behavior="@string/behavior_main_tab"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabTextColor="#000000" />
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:background="@color/white"
-        app:layout_behavior="@string/behavior_main_content" />
-
-</android.support.design.widget.CoordinatorLayout>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
