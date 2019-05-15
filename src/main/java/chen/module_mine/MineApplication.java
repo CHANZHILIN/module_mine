@@ -2,8 +2,8 @@ package chen.module_mine;
 
 import android.app.Application;
 
-import chen.baselib.BaseApplication;
-import chen.baselib.IComponentApplication;
+import chen.baselib.application.BaseApplication;
+import chen.baselib.application.IComponentApplication;
 
 /**
  * Introduce :
